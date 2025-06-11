@@ -9,7 +9,7 @@ class Abstraite(ABC):
     def sePresenter(self):
         return f"bonjour je suis {self.nom}"
 
-class EnfantAbstract(Abstraite):
+class EnfantAbstraite(Abstraite):
     def __init__(self, param, nom, prenom):
         super().__init__(param, nom)
         self.prenom = prenom
@@ -18,5 +18,5 @@ class EnfantAbstract(Abstraite):
         return f"{super().sePresenter()} {self.prenom}"
 
 
-e = EnfantAbstract("dev", "Max", "Le Goat")
+e = EnfantAbstraite("dev", "Max", "Le Goat")
 print(e.sePresenter())
